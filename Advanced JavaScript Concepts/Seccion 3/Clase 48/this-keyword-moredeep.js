@@ -6,6 +6,8 @@
  * 
  */
 
+ /**--------------1era parte del Ejercicio ----------------  */
+
  var b = {
      name: 'Jay', 
      say(){console.log(this)
@@ -18,6 +20,8 @@
  * el objeto "this" en este 1er ejercicio devuelve aquello
  *  que lo llama en este caso la funcion say()
  */
+
+/**--------------2da parte del Ejercicio ----------------  */
 
 var c = {
     name: 'Jay', 
@@ -48,6 +52,8 @@ c.say()() /**al hacer la segunda llamada salta nuestro scope
  * seria say()
  * 
  */
+
+/**--------------3era parte del Ejercicio ----------------  */
 
 var d = {
     name:'Jay', 
