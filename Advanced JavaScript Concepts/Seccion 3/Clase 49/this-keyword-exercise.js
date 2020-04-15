@@ -104,11 +104,12 @@
   console.log('?', giveMeTheCharacterNOW());
 
   /**
-   * con esta linea 101 -.bind(character); -, reconstruye el enlace en el
-   *  scope chain de this.name hacia el objeto character resultando 
-   * abrir execution context con la variable en la cual le hacemos 
-   * el bind giveMeTheCharacterNOW, pudiendose usar limpiamente en el
-   * console.log
+   * con esta linea 101 -.bind(character); -, reconstruye el 
+   * enlace en el scope chain de this.name hacia el objeto 
+   * "character" resultando abrir execution context con 
+   * la variable en la cual le hacemos el bind 
+   * "giveMeTheCharacterNOW", pudiendose usar limpiamente 
+   * en el console.log
    * 
    * console.log('?', giveMeTheCharacterNOW());
    */
