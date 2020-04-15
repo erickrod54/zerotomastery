@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>HELLOOOO</h1><!--vamos a manipular esta data con iife-->
+                         <!--solucionaremos la sobreescritura-->
+<script>
+    /**
+     * el problema 
+     * 
+     * var z = 1 estamos sobreescribiendo z(variable collission)
+    function a(){
+        return 5;
+    }
+    *//**la solucion*/
+     /**y esto al convertirse en 
+    un function expression puedo 
+    colocarla en brackets e 
+    invocarla inkmediato*/
+    var script1 = (function (){
+        function a(){
+            return 5;
+        }
+        return{
+            a:a /*aqui retorno la funcion que acabamos de crear**/
+        }
+    })()
+    /*
+     si llamo a()
+     me resulta en 
+
+         a()
+        "hahahhahaa"
+    
+    pero si llamo a script1.a() me resulta en
+    
+    script1.a()
+    5
+
+    porque al escribirlo asi script1 ahora contiene
+    un objeto que contiene a la funcion a
+    , lo bueno de hacerlo de esta manera a pesar
+    de que en este caso aun hay name pollution o collision
+    es que al hacerlo mediante la expression de la variable
+    nos da un entorno fresco donde podemos tener variables
+    en un scope local
+    **/
+</script>
+<script> var zz= 2; </script>
+<script>var zzz = 3; </script>
+<script>
+    var z = 1000/*con esta variable z y la function a
+                ahora si la ejecutamos 
+                nos da hahaha en vez de 5**/
+    function a(){
+        return 'hahahhahaa'
+    }
+</script>
+    </body>
+</html>

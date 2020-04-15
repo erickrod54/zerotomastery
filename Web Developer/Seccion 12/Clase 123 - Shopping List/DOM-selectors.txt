@@ -1,0 +1,252 @@
+DOM Selectors
+--------------
+getElementsByTagName
+getElementsByClassName
+getElementById
+
+querySelector
+querySelectorAll
+
+getAttribute
+setAttribute
+
+##Changing Styles
+style.{property} //ok
+
+className //best
+classList //best
+
+classList.add
+classList.remove
+classList.toggle
+
+##Bonus
+innerHTML //DANGEROUS
+
+parentElement
+children
+
+##It is important to CACHE selectors in variables
+
+//seleccionamos por tagname la etiqueta h1
+
+document.getElementsByTagName("h1")
+
+HTMLCollection [h1]
+
+//seleccionamos por ClassName
+
+document.getElementsByClassName("second")
+
+HTMLCollection [p.second]
+
+//seleccionamos elemento por id getElementById
+
+document.getElementById("first")
+
+<p id="first">Get it done today</p>
+
+// hay dos incluso mejores que "getElementById" llamados
+//"querySelector", "querySelectorAll"
+//de ellos podemos seleccionar cualquier cosa hecha con css
+
+document.querySelector("li")
+<li random="23">Notebook</li>
+
+//selecciona el primer elemento de la lista porque querySelector
+//selecciona el primer elemento que encuentra de lo que le pidamos
+
+//que sucede si queremos seleccionarlos todos?
+document.querySelectorAll("li")
+
+NodeList(6) [li, li, li, li, li, li]
+
+<li random="23">Notebook</li>
+<li>Jello</li>
+<li>Spinach</li>
+<li>Rice</li>
+<li>Birthday Cake</li>
+<li>Candles</li>
+
+//andrei recomienda el uso "querySelector", "querySelectorAll"
+//porque es exactamente como css lo que lo hace muy poderoso
+//pero claro encontraras los primeros tres en las viejas
+//bases de codigo
+
+//ahora vamos a obtener y colocar atributos "getAttribute","setAttribute"
+//para obtener y colocar debemos primero seleccionar
+
+document.querySelector("li") //para obtener y colocar debemos primero seleccionar
+
+//obteniendo atributo
+
+document.querySelector("li").getAttribute("random");
+"23"
+
+//colocando atributos
+
+document.querySelector("li").setAttribute("random","1000");
+undefined
+document.querySelector("li")
+<li random="1000">Notebook</li>
+
+//Cambiar los estilos
+//style.{property}
+//ok
+
+//vamos a modificar el estilo del tag h1
+
+document.querySelector("h1")
+document.querySelector("h1").style //muestra todo el css del h1
+document.querySelector("h1").style.background = "yellow"; //cambiamos especificamente el background
+"yellow"
+
+//asi podemos modificar los estilos que queramos
+//pero hay un problema aqui, lo que se refiere a
+//la separacion de preocupaciones
+//las preocupaciones de html se ocupa en etiquetas
+//css en el estilo
+//javascript en las acciones
+//y como buena practica nos interesa
+//que se mantengan esas preocupaciones separadas
+
+//Una mejor practica seria..
+
+var h1 = document.querySelector("h1"); //seleccionamos h1
+                                       //dentro de una variable
+h1
+<h1>Shopping List</h1>
+
+//despues de almacenada le damos estilo a la variable
+
+h1.className = "coolTitle";
+
+h1
+
+<h1 class="coolTitle">Shopping List</h1>
+
+//hay otra forma de anadir clases
+//en el caso de las listas
+//className //los mejores segun andrei
+//classList //los mejores segun andrei
+
+document.querySelector("li").classList; //seleccionamos el primero
+                                        //no nos sale nada porque no
+                                        //tenemos clases en ese elemento
+DOMTokenList [value: ""]  //para poder hacer uso de classList
+                          //debemos agregar unas clases
+                          //agregaremos unas dos "bold red"
+
+document.querySelector("li").classList;
+
+DOMTokenList(2) ["bold", "red", value: "bold red"]
+
+//al anadir estas clases nos da la posibilidad de usar alguno
+//de estos 3 metodos
+//classList.add
+//classList.remove
+//classList.toggle
+
+//classList.add anadimos una clase al primer li
+
+document.querySelector("li").classList.add("coolTitle");
+
+//classList.remove ahora la removemos
+
+document.querySelector("li").classList.remove("coolTitle");
+
+//classList.add anadimos una clase nueva con un estilo
+//definido en la hoja css .done ... que lo tacha
+//como una tarea terminada
+
+document.querySelector("li").classList.add("done");
+
+//pero que pasa si me equivoque y quiero activarla y desactivarla
+//classList.toggle funciona como un check lo pasa de true a false
+//y viceversa
+
+//se ingresa la linea de codigo y si:(muy util para un checklist)
+
+document.querySelector("li").classList.toggle("done");
+//si su estado es true cambia a false
+
+document.querySelector("li").classList.toggle("done");
+//si su estado es false cambia a true
+
+//y por ultimo veremos la inserccion
+//##Bonus
+//innerHTML //DANGEROUS - creo que
+//                        se refiere a la separaciones de
+//                        preocupaciones
+
+//parentElement
+//children
+
+document.querySelector("h1").innerHTML = "<strong>!!!!!</strong>";
+"<strong>!!!!!</strong>"
+
+//cambia el contenido del h1
+
+document.querySelector("h1")
+
+<h1>
+  <strong>!!!!!</strong>
+</h1>
+
+//ahora lo haremos con padres e hijos
+//parentElement
+//children
+
+document.querySelectorAll("li")[1];
+<li>Jello</li>
+
+document.querySelectorAll("li")[1].parentElement;//el padre "ul"
+
+<ul>
+  <li class="bold red" random="23">Notebook</li>
+  <li>Jello</li>
+  <li>Spinach</li>
+  <li>Rice</li>
+  <li>Birthday Cake</li>
+  <li>Candles</li>
+</ul>
+
+document.querySelectorAll("li")[1].parentElement.parentElement;
+
+<body>
+  <h1>Shopping List</h1>
+  <p id="first">Get it done today</p>
+  <p class="second">No excuses</p>
+  <ul>
+    <li class="bold red" random="23">Notebook</li>
+    <li>Jello</li>
+    <li>Spinach</li>
+    <li>Rice</li>
+    <li>Birthday Cake</li>
+    <li>Candles</li>
+  </ul>
+</body>
+
+//tambien se puede hacer viceversa para los hijos
+
+document.querySelectorAll("li")[1].parentElement.parentElement.children;
+
+<h1>Shopping List</h1>
+<p id="first">Get it done today</p>
+<p class="second">No excuses</p>
+<ul>
+  <li class="bold red" random="23">Notebook</li>
+  <li>Jello</li>
+  <li>Spinach</li>
+  <li>Rice</li>
+  <li>Birthday Cake</li>
+  <li>Candles</li>
+</ul>
+
+##It is important to CACHE selectors in variables
+//al cache de selectores se refiere a guardar los
+//selectores en variables justo como se hizo aqui
+//"var h1 = document.querySelector("h1");"
+//el hacer esto mejora el rendimiento y dsiminuye
+//consumo por parte del navegador para completar
+//operaciones

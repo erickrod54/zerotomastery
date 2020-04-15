@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+  </head>
+  <body>  
+    <span></span> <!--hace exacamente lo mismo de div pero muy util para una pieza de codigo en especial-->
+    <div> <!--Segunda etiqueta div se usa mucho en css para dividir contenido-->
+      <form>
+        <span >Primer Nombre: </span><input type="text" name="primernombre" value=""><br><br>
+        &nbsp &nbsp&nbsp &nbsp Apellido: <input type="text" name="apellido" value=""><br><br>
+        &nbsp&nbsp&nbsp &nbsp Email: <input type="email" name="email" value="" required><br><br>
+        &nbsp&nbsp&nbsp &nbsp Password: <input type="password" name="password" value="" min="5"><br><br>
+        &nbsp&nbsp&nbsp &nbsp Cumpleaños: <input type="date" name="cumpleanos" value=""><br><br>
+        &nbsp&nbsp&nbsp &nbsp Genero:<br><br>
+         <input type="radio" name="genero" value="Masculino">Masculino
+         <input type="radio" name="genero" value="Femenino">Femenino<br><br>
+         <input type="radio" name="genero" value="Otro">Otro<br><br>
+        &nbsp&nbsp&nbsp &nbsp Mascotas:<br><br>
+        <input type="checkbox" name="gato" value="Gato">Gato <br><br>
+        <input type="checkbox" name="perro" value="Perro">Perro <br><br>
+        Carro:<br><br>
+        <select name="carro">
+               <option value="Volvo" name="volvo" value="Volvo">Volvo</option>
+               <option value="Audi" name="audi" value="Audi">Audi</option>
+        </select><br><br>
+        <input type="submit" name="" value="Registrar"><br>
+        <input type="reset" name="" value="reset">
+      </form>
+      </div>
+  </body>
+</html>
+<!-- Rsultado del subit de datos
+?
+primernombre=hombre
+&apellido=falso
+&email=falso%40gmail.com
+&password=falso123456
+&cumpleanos=1984-07-07
+&genero=Masculino
+&gato=Gato
+&carro=Audi
+-->

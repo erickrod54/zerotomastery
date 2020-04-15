@@ -1,0 +1,22 @@
+.container{
+display: flex;/*muestra el contenido en bloque*/
+flex-wrap: wrap;/*desplaza el contenido en responsive*/
+justify-content: center;/*centra el contenido*/
+}
+h1{
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 2px solid pink;
+  width: 400px;
+  text-align: center;
+  border-right: 2px solid pink;
+}
+img{
+  width: 450px;
+  height: 300px;
+  margin: 10px;/*anade un margen a los elementos del flexbox*/
+}
+/*la mejor forma de aprender Flexbox
+segun @andrei http://flexboxfroggy.com/#es y flexbox es la mejor forma de hacer CSS*/
+/*Para comenzar con Flexbox
+debemos dirigirnos a la web */

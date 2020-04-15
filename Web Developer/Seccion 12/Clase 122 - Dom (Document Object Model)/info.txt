@@ -1,0 +1,26 @@
+que podemos hacer con el dom?
+(Combinacion de html, css y javascript)
+
+1. cambiar todos los elementos html en la pagina
+2. cambiar todos los atributos html en la pagina
+3. cambiar todos los estilos css en la pagina
+4. remover los elementos html y atributos
+5. anadir nuevos elementos html y atributos
+6. javascript puede reaccionar a todos los eventos
+existentes en la pagina.
+7. javascript puede crear nuevos eventos html en la pagina
+
+para la manipulacion del DOM debemos entender dos
+cosas el DOM (Combinacion de html, css y javascript)
+y la segunda es el motor de javascript
+(
+v8 engine for chrome
+chakra core for edge
+nitro for safari
+spidermonkey for firefox
+)
+
+el DOM realiza la utilizacion de cada elemento
+html como un objeto de java(algo que el navegador
+realiza para permitirnos la modificacion del
+documento mediante el uso de javascript)

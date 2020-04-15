@@ -1,0 +1,36 @@
+body{
+  margin: 0;/*para pegar totalmente h1 al borde del screen*/
+}
+
+.container{
+display: flex;/*muestra el contenido en bloque*/
+flex-wrap: wrap;/*desplaza el contenido en responsive*/
+justify-content: center;/*centra el contenido*/
+}
+h1{
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 2px solid pink;
+  width: 400px;
+  text-align: center;
+  border-right: 2px solid pink;
+  box-shadow: 4px 4px 5px #888888;
+  margin-top: 10px;/*para separacion de la galeria*/
+}
+img{
+  width: 450px;
+  height: 300px;
+  margin: 10px;/*anade un margen a los elementos del flexbox*/
+  transition: all 1s;/*Clase 55 transiciones CSS*/
+}
+img:hover{
+  transform: scale(1.1);/*Clase 55 transiciones CSS - se escala por 1.1s*/
+}
+/*Clase 55 CCS3*/
+/*Referencia del soporte css3 - https://www.w3schools.com/cssref/css3_browsersupport.asp*/
+/*Referencia del soporte css3 y porcentaje de uso global por navegador - https://www.udemy.com/the-complete-web-developer-zero-to-mastery/learn/v4/t/lecture/8629652?start=0*/
+/*Referencia del mejor articulo para actualizarse en transiciones CCS3 - https://thoughtbot.com/blog/transitions-and-transforms*/
+/*la mejor forma de aprender Flexbox
+segun @andrei http://flexboxfroggy.com/#es y flexbox es la mejor forma de hacer CSS*/
+/*Para comenzar con Flexbox
+debemos dirigirnos a la web */

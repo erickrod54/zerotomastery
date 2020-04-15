@@ -1,0 +1,23 @@
+/*Selector{
+    Property: value;
+    }*/
+body{
+  background-image: url(https://images.unsplash.com/photo-1550541444-c085c6b4cbc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80);
+  background-size: cover;/*Propiedad para ajustar el la imagen background*/
+}
+h2{
+  color:#0e4dc7;/*Para el cambio de color el uso una web, pero yo use color picker*/
+  text-align: center; /*http://paletton.com/#uid=13V0u0kllll6juBdPpZsRgHI7c4 web para paleta de colores*/
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}
+p{
+  color: pink;
+}
+p{
+  color: green;
+}
+li{
+  list-style: none;
+  display: inline-block;
+}

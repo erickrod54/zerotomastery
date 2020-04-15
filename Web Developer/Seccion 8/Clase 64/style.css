@@ -1,0 +1,8 @@
+.btn-danger{
+	background-color: orange; /*Y asi lo personalizamos rescribienod
+														css en la clase del master css*/
+}
+
+.btn-danger:hover{
+	background-color: black;
+}

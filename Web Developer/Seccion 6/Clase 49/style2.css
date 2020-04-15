@@ -1,0 +1,11 @@
+h2{
+  color: red;
+}
+p{
+  font-size: 20px;
+}
+span{
+  font-size: 5em;/*El tamano del contenido del span sera *5 al contenedor p*/
+}                /*Si colocamos 100px que seria decir 5*20 da el mismo font-size*/
+                  /*em y rem, la diferencia entre em y rem es que rem es el
+                  tamano se multiplica por elemento raiz en este caso el tag <HTML>*/

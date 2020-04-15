@@ -1,0 +1,107 @@
+/*Selector{
+    Property: value;
+    }*/
+* {
+  text-align: right; /* h2 y p permanecen con su atributo de alineacion
+                     es por algo llamado especifidad que en cascada
+                     tiene que tomar el estilo que va mas arriba en la
+                     hoja de estilo, y que engloba especificamente
+                     a los elementos h2 y p -para que tome el estilo de '*'
+                     debemos comentarlo-*/
+}
+body{
+  background-image: url(https://images.unsplash.com/photo-1550541444-c085c6b4cbc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80);
+  background-size: cover;/*Propiedad para ajustar el la imagen background*/
+}
+/*1 er Ejemplo de - element, element -*/
+/*h2, p {
+  color:#0e4dc7;
+  text-align: center;
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}*/
+/*2 do Ejemplo de - element element, las etiquetas h2 y p pierden el estilo
+porque el encabezado dice que solo tendran estilo las 'p' dentro
+de los h2 para lo cual colocaremos una 'p' para este ejemplo  se
+llamara 'Homegnome' dentro del h2 y asi poder
+ver el cambio-*/
+/*h2 p {
+  color:#0e4dc7;
+  text-align: center;
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}*/
+/*3 er Ejemplo de - element > element - asume como hijo el segundo elemento y
+padre al primero e indica que todos los hijos del primer elemento
+tomaran el estilo*/
+/*
+h2 > p {
+  color:#0e4dc7;
+  text-align: center;
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}*/
+/*4 to Ejemplo de - element + element - tomaran css el elemento justo despues del primer elemento
+-ya no es dentro o no importa si es hijo del primer elemento -*/
+/*h2 + p{
+  color:#0e4dc7;
+  text-align: center;
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}*/
+/*5 to Ejemplo de - element + element:hover - hover se puede aplicar en todos los ejemplos anteriores
+esta propiedad es muy usada para botones*/
+h2 + p{
+  color:#0e4dc7;
+  text-align: center;
+  border: 5px solid rgb(124, 135, 190);
+  cursor: pointer;
+}
+/*8 vo ejemplo -esta propiedad rescribe la cascada por lo que se menciona
+pero no es recomendada-*/
+/*
+p{
+  color: pink !important;
+}*/
+p{
+  /*Manipulacion del texto - seccion 6*/
+
+  /*text-decoration: underline;*/  /*Seccion 6 clase 46 - ejemplo de texto subrayado*/
+  /*text-decoration: line-through;*/ /*Seccion 6 clase 46 - ejemplo de texto tachado*/
+  /*text-transform: uppercase;*/ /*Seccion 6 clase 46 - ejemplo de texto en mayuscula*/
+  line-height: 20px; /*Seccion 6 clase 46 - ejemplo de espacio entre el texto*/
+  font-style: italic;/*Seccion 6 clase 46 - ejemplo de estilo de letra*/
+  font-weight: bold;/*Seccion 6 clase 46 - ejemplo borde de la letra*/
+  font-size: 80%;/*Seccion 6 clase 46 - ejemplo aumentar o disminuir el tamano de la letra*/
+  font-family: 'Lato', sans-serif;/*Seccion 6 clase 46 - colocar fuente desde google fonts se anade el link en la pagina y el font family en la pagina css*/
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+.webtext{
+    border: 5px dashed green;
+}
+/*6 to Ejemplo de first-child*/
+/*
+.webtext:first-child{
+    border: 5px dashed green;
+}*/
+
+/* 7 mo Ejemplo de last-child*/
+/*
+.webtext:last-child{
+    border: 5px dashed green;
+}*/
+.active {
+    color: red;
+}
+
+#div1 {
+    background: rgb(124, 155, 200, 0.2); /*El ultimo valor de rgb
+                                         es opacidad*/
+}
+#div2 {
+    background: rgb(255, 0, 0, 0.2); /*El ultimo valor de rgb
+                                         es opacidad*/
+}

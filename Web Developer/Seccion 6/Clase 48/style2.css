@@ -1,0 +1,14 @@
+h2{
+  color: red;
+}
+
+.boxmodel{
+  border: 5px solid red;
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  margin:  0px 20px;/*Manera corta top bottom*/
+  /*margin:  0px 20px 0px 20px; *//*Manera larga de hacerlo top, right, bottom, left*/
+  width: 33px;/*Se usa para dar ancho al contenido*/
+  height:55px;/*Se usa para dar altura al contenido*/
+  /*el contido es el elemento interno de la caja*/
+}
