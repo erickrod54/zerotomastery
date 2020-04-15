@@ -86,3 +86,29 @@
   * with an article on amazon.com
  */
 
+ /**
+  * LA SOLUCION DE ANDREI... EL HACE BIND EN EL SCOPE DE CHARACTER
+  * Y YA FUE JEJEJE.. ES MUCHO MEJOR, SIEMPRE HAY QUE UTILIZAR BIND
+  */
+
+ const character = {
+    name: 'Simon',
+    getCharacter() {
+      return this.name;
+    }
+  };
+
+  const giveMeTheCharacterNOW = character.getCharacter.bind(character);
+  
+  
+  console.log('?', giveMeTheCharacterNOW());
+
+  /**
+   * con esta linea 101 -.bind(character); -, reconstruye el enlace en el
+   *  scope chain de this.name hacia el objeto character resultando 
+   * abrir execution context con la variable en la cual le hacemos 
+   * el bind giveMeTheCharacterNOW, pudiendose usar limpiamente en el
+   * console.log
+   * 
+   * console.log('?', giveMeTheCharacterNOW());
+   */
