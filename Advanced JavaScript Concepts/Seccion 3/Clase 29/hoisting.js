@@ -69,4 +69,38 @@
  *        var teddy = 'bear';          //una funcion la cual 
  *                                    //es totalmento cargada   
  *                                    //hoisted a la memoria
+ * 
+ * en cambio todo lo que es cargado en el global es parcialmente
+ * hoisted
+ * 
+ *      solo nos ubica en memoria        la parte derecha
+ *      heap la parte izquierda          no es almacenada en 
+ *      pero aun asi no tienendo     memoria por eso es undefined 
+ *    valor que es lo mismo que        que es lo mismo a no 
+ *    undefined, pero aun asi         tener un valor asignado
+ *   nos permite usar este lado 
+ *   para luego asignarle un valor
+ *          en la linea 69
+ *     " var teddy = 'bear'; "
+ * 
+ *             var teddy          =         undifined;
+ * 
+ * esto pasa en global lexical enviroment y en las funciones
+ * que son escritas como function expression de esta forma:
+ * 
+ *        var sing2 = function () {
+ *             console.log('ohhh la la la')
+ *          }      
+ * 
+ * si hacemos la llamda antes de escribir la function expression
+ * nos dara como resultado 'undefined' y si lo hacemos despues
+ * de haberla escrito nos dara como resultado 'ohhh la la la'    
+ * 
+ * Lo que son las funciones declaration, son completamente 
+ * hoisted todos sus funciones, variables y datas son cargados 
+ * tanto lado izquierdo como derecho en la memoria
+ * 
+ * 
+ * 
  */
+/* */
