@@ -40,11 +40,18 @@
  */
 
 
- var canada = () =>{
+ var canada = () =>{ //el arrow function solo se puede hacer 
+                    //crear una function expression, 
+                    //y es extremadamente util
+                    //para restablecer el scope 
+                    //chain de en EC
      console.log('cold')
  }
 
- function india(){
+ function india(){//en cambio esta funcion por la forma en que
+                  //esta escrita ya esta allocated
+                  //en la memoria(ya esta guardada en memoria)
+
      console.log('warm')
  }
 
