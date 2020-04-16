@@ -1,4 +1,11 @@
 /**
+ * EL OBJETIVO DE ESTA CLASE ES ENFATIZAR EL HECHO DE QUE
+ * CUANDO USAMOS EL KEYWORD "THIS" NO IMPORTA COMO NUESTRO
+ * CODIGO ESTE ESCRITO (LEXICAL SCOPING), LO QUE IMPORTA
+ * ES COMO LLAMAMOS "()" A NUESTRA FUNCION YA QUE ESO NOS 
+ * DARA ACCESO A LAS (FUNCIONES, VARIABLES Y DATA) QUE 
+ * QUEREMOS ACCEDER CORECTAMENTE (SIENDO ESTO SCOPE DINAMICO)
+ * 
  * recuerdas lexycal scope que determina el acceso a las 
  * variables en nuestro variable enviroment, esto con el
  * ojeto this cambia puesto que ya no importa en el lugar
@@ -30,8 +37,16 @@
  const a = function(){
     console.log('a', this)
     const b = function(){
-        console.log('b', this)
-        const c = {
+        console.log('b', this)//a la izquierda de las funciones
+                             //a y b en EC(execution context) 
+                             //solo se encuentra window 
+                             //object(global)
+
+        const c = {// a partir de esta linea se dispara algo
+                  //muy interesante que es la propiedad 'hi' 
+                  //reflejando que pertenece(antes del punto 
+                  //a la izquierda) a un objeto
+
             hi: function(){
             console.log('c', this)
         }}
