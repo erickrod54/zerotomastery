@@ -13,7 +13,11 @@
  * supongamos que tenemos una funcion:
  * 
  */
-
+/**
+ * es una tecnica que convierte una funcion en una serie de 
+  funciones haciendo calculos previamente antes de que pase 
+  el siguiente argumento, los números se pasan uno tras otro
+ */
  //function currying
  function multiply(a,b){
      return a*b; //esta funcion retorna a por b - a times b
@@ -74,10 +78,19 @@ console.log(multiplyByTwo(4))
 console.log(multiplyByTen(4))
 
 /**esta tecnica es extremadamente poderosa porque nos permite
- * resuar una pieza de codigo existente dandole parametros 
+ * reshuar una pieza de codigo existente dandole parametros 
  * parciales caso de lineas 64 y 68, y crear estas funciones
  *multiplyByTwo() y multiplyByTen() que son mas especificas 
  que solo multiplicar dos parametros.
+
+ Recuerdan que usamos bind() para recordar funciones 
+ que podriamos usar despues ? .... Pues hay una caracteristica 
+ muy interesante que puede lograrse con los parametros 
+
+sobre currying function
+
+
+
  */
 
  

@@ -112,4 +112,8 @@
    * en el console.log
    * 
    * console.log('?', giveMeTheCharacterNOW());
+   * 
+   * Recordar que siempre que vamos a hacer bind tenemos 
+   * que tener un target sobre El cual hacer bind, generalmente 
+   * es el objeto del que queremos sacar data 
    */

@@ -1,4 +1,11 @@
 /**
+ * el objetivo de esta clase es enfatizar el hecho de que cuando 
+ * usamos el keyword "this" no importa como nuestro codigo este 
+ * escrito(lexical scoping), lo que importa es como llamamos "()"
+ *  a nuestra funcion ya que eso nos dara acceso a las funciones,
+ *  variables, y data que queremos acceder correctamente
+ * (siendo esto dynamic scope)
+ * 
  * EL OBJETIVO DE ESTA CLASE ES ENFATIZAR EL HECHO DE QUE
  * CUANDO USAMOS EL KEYWORD "THIS" NO IMPORTA COMO NUESTRO
  * CODIGO ESTE ESCRITO (LEXICAL SCOPING), LO QUE IMPORTA
